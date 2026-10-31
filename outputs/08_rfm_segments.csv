@@ -1,0 +1,8 @@
+segment,customers,pct_of_customers,revenue,pct_of_revenue
+Recent high-value one-timers,14415,15.4,4365199.0,28.3
+At risk: lapsed high-value,13764,14.7,4229198.0,27.4
+Mid one-timers,18059,19.3,2736009.0,17.7
+Lapsed one-timers,22589,24.2,1642364.0,10.7
+Recent one-timers,21721,23.3,1583955.0,10.3
+Repeat customers,1598,1.7,475627.0,3.1
+"Champions (repeat, recent)",1203,1.3,388731.0,2.5

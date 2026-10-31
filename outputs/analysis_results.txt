@@ -1,0 +1,40 @@
+Delivered orders: 96,470 | late: 6.8%
+
+1) Orders with a review and complete item data: 95,808
+   1 On time        n=89,427  1-2 star:   9.3%  (95% CI 9.1% to 9.5%)
+   2 Late 1-3 days  n= 1,852  1-2 star:  32.1%  (95% CI 30.0% to 34.3%)
+   3 Late 4+ days   n= 4,529  1-2 star:  74.8%  (95% CI 73.5% to 76.0%)
+
+2) Logistic regression: chance of a 1-2 star review
+   Controls: price, freight, product weight, items in order, customer state
+   2 Late 1-3 days  odds ratio    4.9  (95% CI 4.4 to 5.4) vs on-time
+   3 Late 4+ days   odds ratio   30.1  (95% CI 28.0 to 32.4) vs on-time
+   Late orders: actual predicted low-review rate 62.4% vs 9.4% if the same orders had arrived on time
+   => adjusted effect of lateness: +53.0 percentage points
+   bootstrap 95% CI for the effect (100 resamples): +51.7 to +54.2 points
+
+3) Robustness checks
+   a) Same comparison inside each big state (does the gap hold everywhere?)
+      SP: on-time  8.7% (n=38,476) vs late 54.4% (n=1,786)  gap +45.7 pts
+      RJ: on-time 10.9% (n=10,754) vs late 73.1% (n=1,456)  gap +62.2 pts
+      MG: on-time  9.5% (n=10,777) vs late 59.0% (n=505)  gap +49.5 pts
+      RS: on-time  8.6% (n=5,003) vs late 64.2% (n=321)  gap +55.6 pts
+      PR: on-time  9.2% (n=4,704) vs late 52.1% (n=194)  gap +42.9 pts
+      SC: on-time  8.9% (n=3,234) vs late 59.9% (n=284)  gap +51.0 pts
+      BA: on-time 11.2% (n=2,845) vs late 60.2% (n=384)  gap +49.0 pts
+      DF: on-time  9.7% (n=1,951) vs late 72.0% (n=118)  gap +62.3 pts
+   b) Single-item orders only (n=86,282): 4+ days late odds ratio 35.1 (95% CI 32.6 to 37.9)
+
+4) Repeat purchase (180 days, new order placed after first delivery)
+   1 On time        customers=52,207  repeat 1.75%  (95% CI 1.64% to 1.87%)
+   2 Late 1-3 days  customers= 1,025  repeat 1.66%  (95% CI 1.04% to 2.64%)
+   3 Late 4+ days   customers= 2,802  repeat 1.03%  (95% CI 0.72% to 1.48%)
+   On-time vs 4+ days late: two-proportion z-test p = 0.0044
+   Adjusted for price, freight and state: late vs on-time odds ratio 0.72 (95% CI 0.53 to 0.97)
+   Sao Paulo only: on-time 2.02% (n=21,281) vs late 1.36% (n=953)
+
+5) Sizing (assumption-based, not a forecast)
+   Overall late rate: 6.8%. Lanes above 10% late in the top-15 list: 6
+   If those lanes matched the overall rate: about 992 fewer late orders
+   x 53.0 points extra chance of a 1-2 star review => about 526 fewer 1-2 star reviews
+   (Lane orders are seller-order pairs, so this is approximate.)

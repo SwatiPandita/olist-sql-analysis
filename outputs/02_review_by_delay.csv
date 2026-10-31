@@ -1,0 +1,4 @@
+delay_group,orders_with_review,avg_score,pct_1_2_star,pct_5_star
+1 On time,89443,4.29,9.3,62.3
+2 Late 1-3 days,1852,3.29,32.1,33.2
+3 Late 4+ days,4529,1.85,74.8,9.7
