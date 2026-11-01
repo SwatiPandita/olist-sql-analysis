@@ -4,9 +4,6 @@
 
 **At a glance:** 99,441 orders across 7 tables · 6.8% of delivered orders arrive late · SQL (CTEs, window functions) + Python (confidence intervals, logistic regression, bootstrap) · the late orders are concentrated in a few seller-to-customer lanes, led by Sao Paulo to Rio de Janeiro.
 
-![Bad reviews by delivery delay](images/review_by_delay.png)
-![Where late orders concentrate](images/worst_lanes.png)
-
 **Dashboard:** 2-page Power BI report (screenshots below).
 
 ![Dashboard page 1](images/dashboard_page1.png)
@@ -37,6 +34,8 @@ Late deliveries are an operations problem, but their cost shows up in customer r
 | Late 4+ days | 4,529 | 74.8% | 73.5% to 76.0% |
 
 (The SQL query counts 16 more on-time orders because the regression drops orders with no product weight.)
+
+![Bad reviews by delivery delay with 95% confidence intervals](images/review_by_delay.png)
 
 **Is it just price, freight, weight or location?** A logistic regression controlling for those gives odds ratios versus on-time of 4.9 (95% CI 4.4 to 5.4) for 1-3 days late and 30.1 (28.0 to 32.4) for 4+ days late.
 
