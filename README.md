@@ -35,8 +35,6 @@ Late deliveries are an operations problem, but their cost shows up in customer r
 
 (The SQL query counts 16 more on-time orders because the regression drops orders with no product weight.)
 
-![Bad reviews by delivery delay with 95% confidence intervals](images/review_by_delay.png)
-
 **Is it just price, freight, weight or location?** A logistic regression controlling for those gives odds ratios versus on-time of 4.9 (95% CI 4.4 to 5.4) for 1-3 days late and 30.1 (28.0 to 32.4) for 4+ days late.
 
 **Does it hold everywhere?** In each of the 8 largest states the gap is positive, from +42.9 points (Parana) to +62.3 points (Distrito Federal). Using only single-item orders, the 4+ days late odds ratio is 35.1 (32.6 to 37.9).
