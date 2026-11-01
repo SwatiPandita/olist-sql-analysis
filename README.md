@@ -7,6 +7,11 @@
 ![Bad reviews by delivery delay](images/review_by_delay.png)
 ![Where late orders concentrate](images/worst_lanes.png)
 
+**Dashboard:** 2-page Power BI report (screenshots below).
+
+![Dashboard page 1](images/dashboard_page1.png)
+![Dashboard page 2](images/dashboard_page2.png)
+
 ## Business question
 
 Late deliveries are an operations problem, but their cost shows up in customer reviews. How much do they hurt, is it really the delay or something else, and which lanes should Olist fix first?
@@ -67,6 +72,7 @@ Six lanes in the top-15 list are late more than 10% of the time. If they matched
 - **SQL (SQLite):** a single `order_facts` table (one row per delivered order) built with CTEs and `ROW_NUMBER()`, then queries for review score by delay, late rate by state with `RANK()`, worst lanes, sellers ranked within state, repeat purchase, cohort retention and RFM segments. Repeat purchase uses `customer_unique_id` (the `customer_id` changes on every order), requires the repeat order to be placed after the first delivery, and only counts customers who could be observed for the full 180 days.
 - **Python:** Wilson confidence intervals, logistic regression with state and product controls, a bootstrap CI for the adjusted effect (100 resamples), within-state and single-item robustness checks, a z-test, and the impact sizing.
 - **Delay definition:** delivered date minus estimated date, compared at date level. Late means after the estimated date.
+- **Power BI:** a 2-page dashboard showing bad reviews by delivery delay and where late orders concentrate.
 
 ## Data
 
