@@ -60,7 +60,7 @@ Six lanes in the top-15 list are late more than 10% of the time. If they matched
 | # | Action | Where | Evidence | Next step |
 |---|---|---|---|---|
 | 1 | Audit carriers and handoffs on the Sao Paulo to Rio de Janeiro lane | SP to RJ (8,274 orders) | 14.0% late, 17.7% of all late seller-order pairs | Compare carrier and seller performance inside the lane |
-| 2 | Review delivery estimates for the highest-late-rate states and lanes | MA, CE, BA, RJ and the lanes above 10% late | Late rates of 12% to 19% | A/B test longer promised dates against conversion |
+| 2 | Review delivery estimates for the highest-late-rate states and lanes | MA, CE, BA, RJ and the lanes above 10% late |    Late rates of 12% to 17% by state (up to 19% on some lanes) | A/B test longer promised dates against conversion |
 | 3 | Contact customers whose orders are tracking 4+ days late | All lanes | 74.8% of these orders get a 1-2 star review | A/B test an apology message or voucher |
 | 4 | Review the sellers that cause the most late orders in their state | SP seller 4a3ca931 (1,772 orders, 9.7% late); MA seller 06a2c3af (389 orders, 19.0% late) | See `outputs/05_seller_rank_in_state.csv` | Check whether the delay is at the seller or the carrier |
 
@@ -94,7 +94,7 @@ python analysis.py     # statistics, charts in images/, outputs/analysis_results
 ├── analysis.py
 ├── sql/            numbered queries, 00 builds the base table
 ├── outputs/        result tables and analysis_results.txt
-├── images/         charts used in this README
+├── images/         dashboard screenshots
 └── data/raw/       Olist CSVs (not committed, see .gitignore)
 ```
 
